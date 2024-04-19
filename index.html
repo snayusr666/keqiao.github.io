@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protected Blog</title>
+</head>
+<body>
+
+<div id="passwordPrompt">
+    <h2>请输入访问密码：</h2>
+    <input type="password" id="passwordInput"><br>
+    <button id="submitButton">提交</button>
+</div>
+
+<div id="blogContent" style="display: none;">
+    <!-- 在这里放你的博客内容 -->
+    <h1>安装方法各手机不同，自行查找</h1>
+    <p>软件下载地址：<a id="downloadLink" href="https://www.5fcc.cc/downloads/12a.apk">点击下载</a></p>
+    建议使用旧手机安装，本软件不挑手机，配置低的手机一样可以流畅运行。
+    微信号：qhv276
+    <img src="https://telegraph-image-755.pages.dev/file/32bc9025967550047f15c.jpg" alt="使用导图">
+</div>
+
+<script>
+    document.getElementById("submitButton").addEventListener("click", function() {
+        var password = document.getElementById("passwordInput").value;
+        // 在这里替换为你的密码
+        if (password === "123456") {
+            document.getElementById("passwordPrompt").style.display = "none";
+            document.getElementById("blogContent").style.display = "block";
+        } else {
+            alert("密码错误，请重新输入！");
+        }
+    });
+</script>
+
+</body>
+</html>
